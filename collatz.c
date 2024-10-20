@@ -2,13 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-// Global variables for cache statistics
 int cache_hits = 0;
 int cache_requests = 0;
 
-/***********************************
- * Collatz Sequence Implementation *
- ***********************************/
 int collatz_steps(int n) {
     int steps = 0;
     while (n != 1) {
@@ -21,10 +17,7 @@ int collatz_steps(int n) {
     }
     return steps;
 }
-
-/**************************
- * LRU Cache Implementation *
- **************************/
+ 
 LRUCache* create_lru_cache(int capacity) {
     LRUCache* cache = (LRUCache*)malloc(sizeof(LRUCache));
     cache->capacity = capacity;
@@ -99,9 +92,6 @@ int check_lru_cache(LRUCache *cache, int num) {
     return CACHE_MISS;
 }
 
-/**************************
- * LFU Cache Implementation *
- **************************/
 LFUCache* create_lfu_cache(int capacity) {
     LFUCache* cache = (LFUCache*)malloc(sizeof(LFUCache));
     cache->capacity = capacity;
