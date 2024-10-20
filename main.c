@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     int cache_size = atoi(argv[4]);
     char *cache_type = argv[5];
 
-    srand(time(NULL)); // Seed for random numbers
+    srand(time(NULL)); 
 
     if (strcmp(cache_type, "LRU") == 0) {
         LRUCache *lru_cache = create_lru_cache(cache_size);
@@ -42,7 +42,6 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    // Report cache hit statistics
     printf("Cache requests: %d\n", cache_requests);
     printf("Cache hits: %d\n", cache_hits);
     printf("Cache hit rate: %.2f%%\n", (float)cache_hits / cache_requests * 100);
