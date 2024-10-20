@@ -3,7 +3,6 @@
 
 #define CACHE_MISS -1
 
-// LRU Cache Structures and Functions
 typedef struct LRUNode {
     int num;
     int steps;
@@ -23,7 +22,6 @@ LRUNode* remove_tail(LRUCache *cache);
 void add_lru_node(LRUCache *cache, int num, int steps);
 int check_lru_cache(LRUCache *cache, int num);
 
-// LFU Cache Structures and Functions
 typedef struct LFUNode {
     int num;
     int steps;
@@ -43,7 +41,6 @@ LFUNode* remove_lfu_node(LFUCache *cache);
 void add_lfu_node(LFUCache *cache, int num, int steps);
 int check_lfu_cache(LFUCache *cache, int num);
 
-// Collatz function
 int collatz_steps(int n);
 
 extern int cache_hits;
